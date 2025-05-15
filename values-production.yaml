@@ -1,0 +1,10 @@
+# will use the chart appVersion, meant to be the most stable version, ideal for production
+image:
+  tag: ""
+
+ingress:
+  hosts:
+    - host: autocicd.your-host.tld
+      paths:
+        - path: /
+          pathType: Prefix

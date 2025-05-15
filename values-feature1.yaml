@@ -1,0 +1,10 @@
+# based on a git commit sha, ideal if you need reliable and precise tracking of your code
+image:
+  tag: 46c038960cbee7b066a39a8c22348d2cf0a611f1
+
+ingress:
+  hosts:
+    - host: autocicd-feat1.your-host.tld
+      paths:
+        - path: /
+          pathType: Prefix

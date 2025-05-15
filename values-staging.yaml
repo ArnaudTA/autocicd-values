@@ -1,0 +1,10 @@
+## image based on branch name, ideal for always existing branch in you project
+image:
+  tag: staging
+
+ingress:
+  hosts:
+    - host: autocicd-staging.your-host.tld
+      paths:
+        - path: /
+          pathType: Prefix

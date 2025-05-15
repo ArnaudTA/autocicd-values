@@ -1,0 +1,1 @@
+Those apps are only the sources section of you argocd applications. Feel free to adapt

@@ -1,0 +1,19 @@
+syncPolicy:
+  automated: {}
+  syncOptions:
+    - CreateNamespace=false
+    - RespectIgnoreDifferences=true
+    - ApplyOutOfSyncOnly=true
+sources:
+  - repoURL: >-
+      https://gitlab.your-host.tld/forge/projects/autocicd/chart.git
+    path: autocicd
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+        - $values/values.yaml
+        - $values/values-staging.yaml
+  - repoURL: >-
+      https://gitlab.your-host.tld/forge/projects/autocicd/values.git
+    targetRevision: HEAD
+    ref: values
