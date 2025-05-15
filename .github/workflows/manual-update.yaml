@@ -8,7 +8,7 @@ on:
 
 jobs:
   sync:
-    uses: ./.github/workflows/sync.yaml
+    uses: ArnaudTA/actions/.github/workflows/sync.yaml@main
     secrets:
       GILTAB_PROJECT_NAME: "${{ vars.GILTAB_PROJECT_NAME }}"
       GITLAB_PROJECT_ID: "${{ vars.GITLAB_PROJECT_ID }}"
