@@ -1,4 +1,4 @@
-name: Update chart
+name: Update environment version
 
 on:
   workflow_call:
