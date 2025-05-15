@@ -52,3 +52,7 @@ jobs:
           git commit -m "Update image tag for ${{ inputs.ENV_NAME }}"
           git push
 
+  sync:
+    needs:
+      - update
+    uses: ./.github/workflows/sync.yaml

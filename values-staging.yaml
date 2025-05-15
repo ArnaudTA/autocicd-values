@@ -1,4 +1,4 @@
-## image based on branch name, ideal for always existing branch in you project
+## based on a git commit sha, ideal if you need reliable and precise tracking of your code
 image:
   tag: 9f0f36233c7ec54e78c2a2611c8f5e111dc97faf
 ingress:
