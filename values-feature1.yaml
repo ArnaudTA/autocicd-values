@@ -1,6 +1,6 @@
 # based on a git commit sha, ideal if you need reliable and precise tracking of your code
 image:
-  tag: 7f1d0e1ed3b24659f7e1815bd84f9cd63c82aefb
+  tag: e699df2209b16bb2ff9bc10cafc8a1f0b7cd4e4f
 ingress:
   hosts:
     - host: autocicd-feat1.your-host.tld
