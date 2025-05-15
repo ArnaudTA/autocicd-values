@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json
 
-# DO NOT USE STRATEGY it can lead to data loss or instability !!! this is exclusively to ease maintenance
+# DO NOT USE THIS STRATEGY it can lead to data loss or instability !!! this is exclusively to ease maintenance
 stages:
   - replace-domain
 
