@@ -25,7 +25,7 @@ on:
 
 jobs:
   update:
-    name: Update a chart version
+    name: Update a environment version
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -34,15 +34,19 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Git
+        id: setup-git
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
 
-      - name: update chart version
-        id: update-chart
+      - name: Update tag version
+        id: update-and-commit
         run: |
           export TAG=${{ inputs.IMAGE_TAG }}
-          yq e -i '.image.tag=env(TAG)' values-${{ inputs.ENV_NAME }}.yaml
+          export FILENAME=values-${{ inputs.ENV_NAME }}.yaml
+          [[ ! -f $FILENAME ]] && exit 0
+
+          yq e -i '.image.tag=env(TAG)' $FILENAME
 
           git add .
           git commit -m "Update image tag for ${{ inputs.ENV_NAME }}"
